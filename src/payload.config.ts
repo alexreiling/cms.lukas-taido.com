@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 import { buildConfig } from "payload/config";
 import path from "path";
 // import Examples from './collections/Examples';
@@ -6,6 +8,8 @@ import Tags from "./collections/Tags";
 import Projects from "./collections/Projects";
 import Media from "./collections/Media";
 import Global from "./globals/Global";
+
+console.log("process.env.SERVER_URL", process.env.SERVER_URL);
 
 export default buildConfig({
   serverURL: process.env.SERVER_URL || "http://localhost:3001",
