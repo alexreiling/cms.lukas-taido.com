@@ -5,6 +5,7 @@ import Users from "./collections/Users";
 import Tags from "./collections/Tags";
 import Projects from "./collections/Projects";
 import Media from "./collections/Media";
+import Global from "./globals/Global";
 
 export default buildConfig({
   serverURL: "http://localhost:3000",
@@ -19,6 +20,7 @@ export default buildConfig({
     // Add Collections here
     // Examples,
   ],
+  globals: [Global],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },

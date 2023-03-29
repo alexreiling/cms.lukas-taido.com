@@ -4,7 +4,8 @@ import { CollectionConfig } from "payload/types";
 const Projects: CollectionConfig = {
   slug: "projects",
   admin: {
-    useAsTitle: "label",
+    useAsTitle: "title",
+    defaultColumns: ["title", "date", "priority", "tags"],
   },
   fields: [
     {
@@ -13,20 +14,54 @@ const Projects: CollectionConfig = {
       required: true,
     },
     {
+      name: "date",
+      type: "date",
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
       name: "teaserImage",
       type: "upload", // required
       relationTo: "media", // required
-      required: true,
+      required: false,
     },
     {
       name: "tags",
       type: "relationship",
       relationTo: "tags",
       hasMany: true,
+      admin: {
+        position: "sidebar",
+      },
+    },
+    {
+      name: "published",
+      type: "checkbox",
+      defaultValue: false,
+      admin: {
+        position: "sidebar",
+      },
     },
     {
       name: "content",
       type: "richText",
+    },
+    {
+      name: "legacyId",
+      type: "number",
+      hidden: true,
+    },
+    {
+      name: "priority",
+      type: "number",
+      defaultValue: 1,
+      required: true,
+      admin: {
+        position: "sidebar",
+        description:
+          "The higher the number, the closer to the top of the list.",
+      },
     },
     {
       name: "images",

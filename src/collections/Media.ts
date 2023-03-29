@@ -1,11 +1,12 @@
 import { CollectionConfig } from "payload/types";
 
+const MEDIA_PATH = process.env.MEDIA_DIR || "../../media";
 const Media: CollectionConfig = {
   slug: "media",
   fields: [],
   upload: {
     staticURL: "/media",
-    staticDir: "../../media",
+    staticDir: MEDIA_PATH,
     imageSizes: [
       {
         name: "thumbnail",
@@ -33,6 +34,7 @@ const Media: CollectionConfig = {
     adminThumbnail: "thumbnail",
     mimeTypes: ["image/*"],
   },
+  access: {},
 };
 
 export default Media;
