@@ -7,10 +7,10 @@ import Projects from "./collections/Projects";
 import Media from "./collections/Media";
 import Global from "./globals/Global";
 
-console.log("process.env.SERVER_URL", process.env.SERVER_URL);
+console.log("process.env.SERVER_URL", process.env.PAYLOAD_PUBLIC_SERVER_URL);
 
 export default buildConfig({
-  serverURL: process.env.SERVER_URL || "http://localhost:3001",
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || "http://localhost:3001",
   admin: {
     user: Users.slug,
   },
