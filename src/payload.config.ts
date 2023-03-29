@@ -8,7 +8,7 @@ import Media from "./collections/Media";
 import Global from "./globals/Global";
 
 export default buildConfig({
-  serverURL: "http://localhost:3001",
+  serverURL: process.env.SERVER_URL || "http://localhost:3001",
   admin: {
     user: Users.slug,
   },
