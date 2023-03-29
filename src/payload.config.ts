@@ -13,6 +13,7 @@ export default buildConfig({
   admin: {
     user: Users.slug,
   },
+  cors: ["http://localhost:3000"],
   collections: [
     Users,
     Tags,
