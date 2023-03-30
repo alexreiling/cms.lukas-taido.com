@@ -4,6 +4,9 @@ const MEDIA_PATH = process.env.MEDIA_DIR || "../../media";
 const Media: CollectionConfig = {
   slug: "media",
   fields: [],
+  access: {
+    read: () => true,
+  },
   upload: {
     staticURL: "/media",
     staticDir: MEDIA_PATH,
@@ -34,7 +37,6 @@ const Media: CollectionConfig = {
     adminThumbnail: "thumbnail",
     mimeTypes: ["image/*"],
   },
-  access: {},
 };
 
 export default Media;

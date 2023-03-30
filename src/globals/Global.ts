@@ -2,6 +2,9 @@ import { GlobalConfig } from "payload/types";
 
 const Global: GlobalConfig = {
   slug: "global",
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: "activeTags",

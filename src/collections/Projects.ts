@@ -7,6 +7,9 @@ const Projects: CollectionConfig = {
     useAsTitle: "title",
     defaultColumns: ["title", "date", "priority", "tags"],
   },
+  access: {
+    read: () => true,
+  },
   fields: [
     {
       name: "title",
