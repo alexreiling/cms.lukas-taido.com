@@ -7,13 +7,29 @@ const Global: GlobalConfig = {
   },
   fields: [
     {
-      name: "activeTags",
-      type: "relationship",
-      relationTo: "tags",
-      hasMany: true,
-      admin: {
-        description: "The filters that can be selected on the portfolio page",
-      },
+      type: "group",
+      name: "portfolio",
+      fields: [
+        {
+          name: "activeTags",
+          type: "relationship",
+          relationTo: "tags",
+          hasMany: true,
+          admin: {
+            description:
+              "The filters that can be selected on the portfolio page",
+          },
+        },
+        {
+          name: "defaultTag",
+          type: "relationship",
+          relationTo: "tags",
+          admin: {
+            description:
+              "The default filter that is selected on the portfolio page",
+          },
+        },
+      ],
     },
     {
       name: "introGallery",
