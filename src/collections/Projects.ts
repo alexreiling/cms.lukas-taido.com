@@ -67,6 +67,25 @@ const Projects: CollectionConfig = {
       },
     },
     {
+      name: "videos",
+      type: "array",
+      fields: [
+        {
+          name: "vimeoUrl",
+          type: "text",
+          required: true,
+          admin: {
+            description:
+              "The URL of the Vimeo video, e.g. https://vimeo.com/123456789",
+          },
+        },
+        {
+          name: "caption",
+          type: "text",
+        },
+      ],
+    },
+    {
       name: "images",
       type: "array",
       fields: [
