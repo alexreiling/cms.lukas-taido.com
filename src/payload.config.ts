@@ -6,6 +6,8 @@ import Tags from "./collections/Tags";
 import Projects from "./collections/Projects";
 import Media from "./collections/Media";
 import Global from "./globals/Global";
+import DSGVO from "./globals/DSGVO";
+import Impressum from "./globals/Impressum";
 
 export default buildConfig({
   // serverURL fucks up the build
@@ -22,7 +24,7 @@ export default buildConfig({
     // Add Collections here
     // Examples,
   ],
-  globals: [Global],
+  globals: [Global, DSGVO, Impressum],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
