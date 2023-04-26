@@ -24,7 +24,7 @@ export default buildConfig({
     // Add Collections here
     // Examples,
   ],
-  globals: [Global, DSGVO, Impressum],
+  globals: [Global, Impressum],
   typescript: {
     outputFile: path.resolve(__dirname, "payload-types.ts"),
   },
