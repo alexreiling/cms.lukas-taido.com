@@ -6,14 +6,17 @@ import Tags from "./collections/Tags";
 import Projects from "./collections/Projects";
 import Media from "./collections/Media";
 import Global from "./globals/Global";
-import DSGVO from "./globals/DSGVO";
 import Impressum from "./globals/Impressum";
 
 export default buildConfig({
   // serverURL fucks up the build
   // serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || "http://localhost:3001",
+
   admin: {
     user: Users.slug,
+    meta: {
+      favicon: "/assets/favicon.ico",
+    },
   },
   cors: ["http://localhost:3000"],
   collections: [

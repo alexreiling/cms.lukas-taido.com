@@ -1,8 +1,10 @@
 require("dotenv").config();
 import express from "express";
+import path from "path";
 import payload from "payload";
 
 const app = express();
+app.use("/assets", express.static(path.resolve(__dirname, "./assets")));
 
 // Redirect root to Admin panel
 app.get("/", (_, res) => {
