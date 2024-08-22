@@ -14,6 +14,11 @@ app.get("/", (_, res) => {
 const start = async () => {
   // Initialize Payload
   await payload.init({
+    email: {
+      fromName: "Admin",
+      fromAddress: "admin@example.com",
+      logMockCredentials: true, // Optional
+    },
     secret: process.env.PAYLOAD_SECRET,
     mongoURL: process.env.MONGODB_URI,
     express: app,
