@@ -5,6 +5,8 @@ import Users from "./collections/Users";
 import Tags from "./collections/Tags";
 import Projects from "./collections/Projects";
 import Media from "./collections/Media";
+import Press from "./collections/Press";
+import Documents from "./collections/Documents";
 import Global from "./globals/Global";
 import Impressum from "./globals/Impressum";
 
@@ -24,6 +26,8 @@ export default buildConfig({
     Tags,
     Projects,
     Media,
+    Documents,
+    Press,
     // Add Collections here
     // Examples,
   ],

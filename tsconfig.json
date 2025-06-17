@@ -9,9 +9,11 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "jsx": "react",
+    "moduleResolution": "node",
     "paths": {
       "payload/generated-types": ["./src/payload-types.ts"]
-    }
+    },
+    "types": ["node"]
   },
   "include": ["src", "src/collections/.ts"],
   "exclude": ["node_modules", "dist", "build"],
